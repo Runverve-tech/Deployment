@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: runverve-cred-api
+    ports:
+      - "5000:5000"
+    environment:
+      - OAUTHLIB_INSECURE_TRANSPORT=1
+      - FLASK_ENV=production
+      - DATABASE_URL=postgresql://your_user:your_password@your_neon_host/your_db
+    volumes:
+      - .:/runverve-cred-api
