@@ -1,0 +1,10 @@
+
+services:
+  userpreferences:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/userpreferences
+    restart: always
+    command: ["python3", "user_preferences.py"]
